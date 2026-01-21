@@ -14,21 +14,21 @@ export interface ReactiveController {
 
 /**
  * Base class for components that want to use reactive controllers.
- * 
+ *
  * Components extending this class can use the composition pattern to share
  * stateful logic via reactive controllers.
- * 
+ *
  * Known Limitation: Components extending ReactiveControllerHost cannot use
  * `<Host>` as their root element in the render method. This is because
  * ReactiveControllerHost does not extend HTMLElement. Instead, return a
  * regular element (like `<div>`) as the root.
- * 
+ *
  * @example
  * ```tsx
  * @Component({ tag: 'my-component' })
  * export class MyComponent extends ReactiveControllerHost {
  *   private myController = new MyController(this);
- *   
+ *
  *   render() {
  *     return <div>...</div>; // Use <div>, not <Host>
  *   }

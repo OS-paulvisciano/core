@@ -656,7 +656,7 @@ export interface ReactiveController {
 /**
  * Base class that implements ComponentInterface and provides reactive controller functionality.
  * Components can extend this class to enable reactive controller composition.
- * 
+ *
  * Known Limitation: Components extending ReactiveControllerHost cannot use
  * `<Host>` as their root element in the render method. This is because
  * ReactiveControllerHost does not extend HTMLElement. Instead, return a
